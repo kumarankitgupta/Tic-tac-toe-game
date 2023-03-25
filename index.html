@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic tac toe</title>
+    <style>
+        body{
+            background-color:#F7F7F7;
+        }
+        .btn{
+            height: 30%;
+            width:30%;
+            font-size: 80px;
+            margin: 1px;
+            margin-left: 2px;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            background-color: #fff;
+            border: none;
+        }
+        .box{
+            width:300px;
+            align-items: center;
+            border: 5px solid black;
+            align-items: center;
+            justify-content: center;
+            display: inline-block;
+            margin: 5%;  
+            margin-bottom:20px; 
+            margin-top: 10px;  
+        }
+        .score{
+            color: #FC7300;
+        }
+    </style>
+</head>
+<body id="main">
+
+    <center>
+        <h2 style="color: #FC7300; font-size: 200%;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Enjoy Tic Tac Toe</h2>
+        <p>The Player Who Score 5 points will be declared as Winner</p>
+    <div class="box">
+        <button class="btn" id="i00" onclick="xorO(0,0,'i00')">&nbsp;</button>
+        <button class="btn" id="i01" onclick="xorO(0,1,'i01')">&nbsp;</button>
+        <button class="btn" id="i02" onclick="xorO(0,2,'i02')">&nbsp;</button>
+        <br>
+        <button class="btn" id="i10" onclick="xorO(1,0,'i10')">&nbsp;</button>
+        <button class="btn" id="i11" onclick="xorO(1,1,'i11')">&nbsp;</button>
+        <button class="btn" id="i12" onclick="xorO(1,2,'i12')">&nbsp;</button>
+        <br>
+        <button class="btn" id="i20" onclick="xorO(2,0,'i20')">&nbsp;</button>
+        <button class="btn" id="i21" onclick="xorO(2,1,'i21')">&nbsp;</button>
+        <button class="btn" id="i22" onclick="xorO(2,2,'i22')">&nbsp;</button>
+    </div>
+    <br>
+    <button id="reset" style="display: none;background-color:#BFDB38;color:#FC7300; border: none;font-size: large;" onclick="resetAgain()">Reset</button>
+    <h2 id="info" style="color:green;font-size:250%;"></h2>
+    <h1>Points</h1>
+    <h1 class="score">X : <label id="p1">0</label></h1>
+    <h1 class="score">O : <label id="p2">0</label></h1>
+    <h3>app created by Akg@achiever❤️</h3>
+    </center>
+    <script src="script.js"></script>
+</body>
+</html>
