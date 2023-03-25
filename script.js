@@ -3,6 +3,7 @@ const p1 = document.getElementById("p1")
 const p2 = document.getElementById("p2")
 const buttons = document.getElementsByClassName('btn')
 const reset = document.getElementById("reset")
+const replay = document.getElementById("replay");
 var over = true;
 var count = 0;
 var user_x = 0;
@@ -77,11 +78,13 @@ function xorO(x,y,z){
         if(user_o === 5){
             reset.style.display = "none";
             info.innerText = "O is Winner of the Game!"
+            replay.style.display = "block";
             document.body.style.backgroundImage = "url('gify.gif')";
         }
         else if(user_x === 5){
             reset.style.display = "none";
             info.innerText = "X is Winner of the Game!"
+            replay.style.display = "block";
             document.body.style.backgroundImage = "url('gify.gif')";
         }else{
             info.innerText = Winner + " Wins!"
@@ -103,4 +106,7 @@ function resetAgain(){
     buttons[i].innerHTML="&nbsp;";
     over = true;
    }
+function reload(){
+    location.reload();
+}
 
